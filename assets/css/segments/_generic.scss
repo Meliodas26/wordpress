@@ -1,0 +1,27 @@
+.generic-1{
+	display: flex;
+}
+@media(max-width: 1199px){.generic-1{flex-direction: column;}}
+
+.generic-2{
+	margin: 1rem 0;
+	.title{
+		margin: 0 1rem;
+		h2{font-size: 30px;}
+		.center-triangle{display: flex; align-items: center;}
+		.triangle{
+			width: 0;
+			height: 0;
+			border-top: 20px solid #A8D4F2;
+			border-right: 40px solid transparent;
+			margin-right: 1rem;
+		}
+	}
+	.title,.content{display: flex;}
+}
+@media(max-width: 1199px){
+	.generic-2{
+		.title{h2{font-size: 22px;}}
+		.content{flex-direction: column;}
+	}
+}

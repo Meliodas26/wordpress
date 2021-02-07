@@ -1,0 +1,61 @@
+body{
+	margin: 0; 
+	background-color: #FFFFFF;
+	font-family: 'Raleway', sans-serif !important;
+	h3,p{
+		margin: 0;
+	}
+	a,button{
+		&:hover{
+			transition-property: all;
+  		transition-duration: .5s;
+  		transition-timing-function: ease-in;
+		}
+		div{
+			&:hover{
+				transition-property: all;
+  			transition-duration: .5s;
+  			transition-timing-function: ease-in;
+			}
+		}
+	}
+
+	//Hovers
+	button{
+		cursor: pointer;
+		outline: none;
+		&:hover{
+			transition-property: all;
+			transition-duration: .5s;
+			transition-timing-function: ease-in;
+			opacity: .7;
+			cursor: pointer;
+		}
+	}
+	//SocialNetworks
+	.a-yt{
+		&:hover{
+			background-color: #FF0000!important;
+		}
+	}
+	.a-insta{
+		&:hover{
+			background-color: #E2609C!important;
+		}
+	}
+	.a-face{
+		&:hover{
+			background-color: #0574E7!important;
+		}
+	}
+	
+}
+/*Appear navbar animation*/
+.appear-1{
+	-webkit-animation-name: appear1;
+  -webkit-animation-duration: 1.5s;
+  animation-name: appear-1;
+	animation-duration: 1.5s;
+}
+@-webkit-keyframes appear-1 {from {opacity: 0}to {opacity: 1}}
+@keyframes appear-1 {from {opacity: 0} to {opacity: 1}}

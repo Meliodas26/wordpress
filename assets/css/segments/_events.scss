@@ -1,0 +1,16 @@
+.events{
+	//padding: 1rem;
+	background-color: #F5F5F5;
+	.elements{
+		padding: 0 1rem;
+		overflow: auto;
+		white-space: nowrap;
+		background-color: #F5F5F5;
+		.event{
+			display: inline-block;
+			margin: 2rem;
+			margin-top: 0;
+			//margin-top: 0;
+		}
+	}
+}

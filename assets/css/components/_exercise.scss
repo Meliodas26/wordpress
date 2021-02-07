@@ -1,0 +1,44 @@
+.exercise{
+	margin: 1rem;
+	display: flex;
+	align-items: flex-end;
+	height: 400px;
+	box-shadow: 2px 2px 2px #999;
+	background-repeat: no-repeat, repeat;
+	background-size: cover;
+	background-position: center;
+	.information{
+		height: 50%;
+		background-color: rgba(0,0,0,0.5);
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-end;
+		h3,p,button{color: #fff;}
+		h3,p,button{margin-left: 1rem!important; margin-right: 1rem!important;}
+		h3{font-size: 24px; font-weight: 800; margin-bottom: 20px}
+		p{font-size: 20px; font-weight:300;}
+		button{
+			margin: 20px;
+			width: 200px;
+			height: 40px;
+			font-weight: bold;
+			background-color: #2374AB;
+			border-radius: 10px;
+			border-width: 0;
+			font-size: 20px;
+		}
+	}
+}
+.exercise-1{background-image: url('../img/prueba.png');}
+.exercise-2{background-image: url('../img/exercise-2.png');}
+@media(max-width: 1199px){.information{width: 100%;}}
+@media(max-width: 800px){
+	.exercise{
+		.information{
+			h3{font-size: 18px;}
+			p{font-size: 16px;}
+			button{font-size: 16px;}
+		}
+	}
+}
+@media(max-width: 400px){.exercise{h3{margin-bottom: 10px!important;}}}
