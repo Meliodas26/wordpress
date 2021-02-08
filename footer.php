@@ -1,34 +1,43 @@
 <?php wp_footer(); ?>
 <footer>
 	<div class="left">
-		<div class="social-networks">
-			<a href="#"><div class="a-yt"><em class="fab fa-youtube"></em></div></a>
-			<a href="#"><div class="a-insta"><em class="fab fa-instagram"></em></div></a>
-			<a href="#"><div class="a-face"><em class="fab fa-facebook-f"></em></div></a>
-		</div>
-		<a href="mailto:itmileschristi@gmail.com">
-			<div class="link">
-				<em class="fas fa-envelope"></em>
-				itmileschristi@gmail.com
-			</div>
-		</a>
-		<a href="tel:+3330202010">
-			<div class="link">
-				<em class="fas fa-phone"></em>
-				333-020-2010
-			</div>
+		<?php wp_nav_menu(
+			array(
+				'theme_location' => 'social-networks',
+				'container_class'=> 'nav-social-networks-footer',
+				)
+			); 
+		?>
+		<?php wp_nav_menu(
+			array(
+				'theme_location' => 'contact',
+				'container_class'=> 'nav-contact',
+				)
+			); 
+		?>
+	</div>
+	<div class= "center">
+		<?php
+			$custom_logo_id = get_theme_mod('custom_logo');
+			$logo = wp_get_attachment_image_src($custom_logo_id, 'full');
+			
+		?>
+		<a href="localhost/wordpress">
+			<img
+				alt="logo"
+				src="<?php echo $logo[0] ?>"
+			>
 		</a>
 	</div>
-	<div class="center">
-		<h3>Miles Christi</h3>
-		<h3>Instituto religioso</h3>
-	</div>
-	<div class="right">
-		<h6>Sitios de interes</h6>
-		<div><a href="#">Oraciones en latin</a></div>
-		<div><a href="#">Hora Santa</a></div>
-		<div><a href="#">Nosotros</a></div>
-		<div><a href="#">Galeria</a></div>
+	<div class = "right">
+		<h6>Sitios de interés</h6>
+		<?php wp_nav_menu(
+			array(
+				'theme_location' => 'interest-sites',
+				'container_class'=> 'nav-interest-sites',
+				)
+			); 
+		?>
 	</div>
 </footer>
 </body>

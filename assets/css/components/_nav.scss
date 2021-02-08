@@ -1,0 +1,100 @@
+//Social networks
+.nav-social-networks-header,.nav-social-networks-footer{
+	display: flex;
+	ul{
+		display: flex;
+		align-items: center;
+		li{
+			display: flex;
+			background-color: #FFF;
+			border-radius: 25px;
+			width: 40px;
+			height: 40px;
+			justify-content: center;
+			align-items: center;
+			margin: 0 5px;
+			a{
+				font-size: 20px;
+				color: #393939;
+				&:hover{
+					color: #FFF;
+				}
+			}
+			&:hover{
+				a{
+					color: #FFF;
+				}
+			}
+		}
+		.menu-item-37{
+			&:hover{
+				background-color: #FF0000!important;
+			}
+		}
+		.menu-item-54{
+			&:hover{
+				background-color: #E2609C!important;
+			}
+		}
+		.menu-item-53{
+			&:hover{
+				background-color: #0574E7;
+			}
+		}
+	}
+}
+//Social netorks - header
+.nav-social-networks-header{
+	height: 50%;
+	justify-content: flex-end;
+}
+
+//Main
+.nav-main{
+	display: flex;
+	height: 50%;
+	align-items: center;
+	ul{
+		display: flex;
+		width: 100%;
+		justify-content: flex-end;
+	}
+	li{
+		margin: 0 .5rem;
+		a{
+			color: #FFF;
+			font-size: 20px;
+			font-weight: 300;
+			font-size: 20px;
+		}
+		:hover{color: #D70030;}
+	}
+}
+
+//Contact
+.nav-contact{
+	margin: 1rem .5rem;
+	ul{
+		li{
+			margin: .5rem 0;
+			a{
+				color: #FFF;
+				.m{
+					margin-right: 1rem;
+				}
+			}
+		}
+	}
+}
+
+//Interest sites
+.nav-interest-sites{
+	ul{
+		display: flex;
+		flex-direction: column;
+		align-items: flex-end;
+		li{
+			margin: .25rem 0;
+		}
+	}
+}
