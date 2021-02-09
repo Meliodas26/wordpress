@@ -7,7 +7,7 @@ header{
 		background: rgba(0, 0, 0, 0.3);
 		height: 720px;
 		.top{
-			padding: 1.5rem 1rem;
+			padding: 15px 1rem;
 			display: flex;
 			height: 100px;
 			.left{
@@ -21,6 +21,20 @@ header{
 				flex-direction: column;
 			}
 			.right-mobile{display: none;}
+		}
+		.bottom{
+			height: 590px;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			margin: 0 1rem;
+			h1,p{
+				margin: 1rem 0;
+				color: #FFF;
+			}
+			h1{font-size: 52px;}
+			p{font-size: 28px; text-align: center; font-weight: 300;}
 		}
 	}
 }

@@ -1,9 +1,4 @@
 .generic-1{
-	display: flex;
-}
-@media(max-width: 1199px){.generic-1{flex-direction: column;}}
-
-.generic-2{
 	margin: 1rem 0;
 	.title{
 		margin: 0 1rem;
@@ -18,10 +13,4 @@
 		}
 	}
 	.title,.content{display: flex;}
-}
-@media(max-width: 1199px){
-	.generic-2{
-		.title{h2{font-size: 22px;}}
-		.content{flex-direction: column;}
-	}
 }

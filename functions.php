@@ -45,4 +45,34 @@ function add_Assets() {
 }
 add_action( 'wp_enqueue_scripts', 'add_Assets' );
 
+// Custom post types
+
+//Featured sites
+function featured_sites(){
+	$labels = array(
+			'name' => 'Sitios destacados',
+			'singular_name' => 'featured-sites',
+			'manu_name' => 'Sitios destacados',
+	);
+
+	$args = array(
+			'label'  => 'featured-sites', 
+			'description' => 'Sitios destacados de la página',
+			'labels'       => $labels,
+			'supports'   => array('title','excerpt','thumbnail'),
+			'public'    => true,
+			'show_in_menu' => true,
+			'menu_position' => 5,
+			'menu_icon'     => 'dashicons-book',
+			'can_export' => true,
+			'publicly_queryable' => true,
+			'rewrite'       => true,
+			'show_in_rest' => true
+	);  
+	//Nombre de post types en singular es recomendado  
+	register_post_type('featured-sites', $args);
+}
+
+add_action('init', 'featured_sites');
+
 ?>

@@ -33,6 +33,50 @@
 					); 
 				?>
 			</div>
+		</div>
+		<div class="bottom" id="hidden-desktop">
+			<h1><?php bloginfo('name'); ?></h1>
+			<p><?php bloginfo('description'); ?></p>
+		</div>
+	</div>
 </header>
+
+<!-- Sitios destacados -->
+<?php
+	$args = array(
+		'post_type' => 'featured-sites',
+		'post_per_page' => -1, 
+		'order'         => 'ASC',
+		'orderby'       => 'title'
+	);
+	$featured_sites = new WP_Query($args);
+?>
+<section class="generic-1">
+	<div class="title">
+		<div class="center-triangle"><div class="triangle"></div></div>
+		<h2>Sitios destacados</h2>
+	</div>
+	<div class="content">
+		<?php  
+			if($featured_sites->have_posts()){
+				while($featured_sites->have_posts()){
+					$featured_sites->the_post();
+				?>
+				<div 
+					class="featured-site" 
+					style = "background-image: url(<?php the_post_thumbnail_url();?>)"
+				>
+					<div class="information">
+						<h3><?php the_title(); ?></h3>
+						<?php the_excerpt(); ?>
+						<button>Informes</button>
+					</div>
+				</div>
+				<?php	
+				}
+			}
+		?>
+	</div>
+</section>
 
 <?php get_footer(); ?>
